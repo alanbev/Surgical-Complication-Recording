@@ -1,0 +1,54 @@
+
+
+.outerBox{
+border:solid grey;
+border-radius:10px;
+background-color: rgb(203, 218, 241);
+}
+
+
+
+#hidden{
+display: none;
+}
+
+.modalInputBox {width: 70%;
+     margin: 5px;
+     border-radius:3px;
+     border: solid lightgrey;
+     background-color: white;
+}
+
+
+.checkboxItem{
+display:inline-block;
+margin: 5px
+
+}
+
+.checkboxContainer {
+    border: solid;
+    border-color: lightgrey;
+    border-radius:10px;
+    max-height:160px; 
+    max-width:100%;
+    display: flex;
+    flex-flow: column wrap;
+    width: auto; 
+    margin: 1px;
+    background-color: aliceblue;
+}
+
+.radioboxContainer {
+    border: solid;
+    border-color: lightgrey;
+    border-radius:10px;
+    max-height:auto; 
+    max-width:100%;
+    display: flex;
+    flex-flow: column wrap;
+    width: auto; 
+    margin: 1px;
+    background-color: aliceblue;
+}
+

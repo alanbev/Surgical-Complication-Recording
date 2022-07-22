@@ -1,0 +1,106 @@
+import React, {  useRef, useContext } from 'react';
+import {  Button, Box, Grid } from '@mui/material';
+import { Formik, Form, Field, ErrorMessage, validateYupSchema } from 'formik';
+import * as Yup from 'yup'
+import symptomHandler from '../../utilities/symptomHandler.js';
+import RadioButton from './radiobutton';
+import CheckboxGroup from './checkboxgroup'
+import InputField from './inputfield';
+import TextArea from './textarea';
+import DropDown from './dropdown'
+import ReferralContents from '../../Contents/referalcontents.js'
+
+
+
+
+function FormMaker(props){
+
+
+ const initialValues= symptomHandler.initialValuesBuilder(ReferralContents)
+  
+
+const formValues=useRef()
+
+ const validationSchema={}
+ 
+ const onSubmit=(values)=>
+   {
+    console.log(values, initialValues)
+    
+   }
+
+
+const onChange=(symptom,element)=>{;
+initialValues[symptom]=element}
+
+ let formQuestions=ReferralContents.map((symptom, index)=>
+    { 
+      //label: 'When present', controlType: 'radio button', options: Array(2)}
+      symptom["name"]=symptom.label.replaceAll(" ","_")
+    
+
+ switch(symptom["controlType"])
+    {
+      case "radio button":
+        symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "checkbox")
+       return (<Grid item xs={12} sm={6} key={index}> <RadioButton  symptom={symptom}  onChange={onChange} key={0} /> </Grid>)
+
+      case "number":
+      return (<Grid item xs={12} sm={6} key={index}> <InputField type={"number"} symptom ={symptom} min={"0"} key={0} /> </Grid>)
+
+      case "text":
+       return (<Grid item xs={12} sm={6} key={index}> <InputField type={"text"} symptom ={symptom}  key={0} /> </Grid>)
+
+      
+      case "textarea":
+
+      return (<Grid item xs={12} sm={6} key={index}> <TextArea  symptom ={symptom}  key={0} /> </Grid>)
+      
+      case "dropdown": 
+      symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "dropdown")
+      return(<Grid item xs={12} sm={6} key={index}> <DropDown  symptom ={symptom}  key={0} /> </Grid>)
+
+      case "checkbox group":
+        let gridSize = 6
+        if (symptom.options.length >6)
+          {gridSize = 12} 
+        symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "checkbox")
+        return (<Grid item  xs={gridSize} key={index}> <CheckboxGroup symptom={symptom}  key={0} /> </Grid>)
+
+      case "date": // still has problems with size of box on form and date format in story!
+      return (<Grid item xs={12} sm={6} key={index}> <InputField type={"date"} symptom ={symptom}  key={0} /> </Grid>)
+
+      default:{return(<></>)}
+ }
+
+})
+
+ 
+return(
+
+        <Formik
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        //validationSchema={validationSchema}
+        innerRef={formValues}
+        >
+
+
+       <Form>
+           
+        <Box>
+        <Grid container >
+        {formQuestions}
+       </Grid> 
+       </Box>
+        <Button sx={{ m: 1 }} variant='contained' size="small" type='submit'>Submit</Button>
+        
+        </Form>
+      </Formik>
+
+)
+
+
+
+}
+export default FormMaker
