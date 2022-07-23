@@ -79,7 +79,7 @@ delay()
         if (symptom.options.length >6)
           {gridSize = 12} 
         symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "checkbox")
-        return (<Grid item  xs={gridSize} key={index}> <CheckboxGroup symptom={symptom}  key={0} /> </Grid>)
+        return (<Grid item  xs={12} sm={gridSize} key={index}> <CheckboxGroup symptom={symptom}  key={0} /> </Grid>)
 
       case "date": // still has problems with size of box on form and date format in story!
       return (<Grid item xs={12} sm={6} key={index}> <InputField type={"date"} symptom ={symptom}  key={0} /> </Grid>)
