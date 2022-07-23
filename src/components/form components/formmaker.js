@@ -26,23 +26,15 @@ const formValues=useRef()
  
  const onSubmit=(values)=>
    {
-    console.log(values, initialValues)
+    console.log(values)
     
    }
-
-
-const onChange=(symptom,element)=>{
- console.log(newValues)
-initialValues[symptom]=element}
-
 
 const onClick=()=>{
 const setVals=()=>(setNewValues(formValues.current.values))// allows time for react to update state (tried a useEffect but didn't work)
 const delay=()=> setTimeout(setVals,400)
 delay()
-
-
-console.log(newValues)}
+}
 
 
 
@@ -54,12 +46,10 @@ console.log(newValues)}
     
       if (symptom.hasOwnProperty("Conditional"))
         {
-         console.log("conditioal run",symptom.Conditional)
          let conditional=symptom.Conditional
         if (newValues[conditional[0]]!==conditional[1])
         {
           symptom["show"]=false
-          console.log("this has run",newValues[conditional[0]], conditional[1])
         }
         else {symptom["show"]=true}
       }
@@ -68,7 +58,7 @@ console.log(newValues)}
     {
       case "radio button":
         symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "checkbox")
-       return (<Grid item xs={12} sm={6} key={index}> <RadioButton  symptom={symptom}  onChange={onChange} onClick={onClick} key={0} /> </Grid>)
+       return (<Grid item xs={12} sm={6} key={index}> <RadioButton  symptom={symptom}   onClick={onClick} key={0} /> </Grid>)
 
       case "number":
       return (<Grid item xs={12} sm={6} key={index}> <InputField type={"number"} symptom ={symptom} min={"0"} key={0} /> </Grid>)
@@ -78,8 +68,7 @@ console.log(newValues)}
 
       
       case "textarea":
-
-      return (<Grid item xs={12} sm={6} key={index}> <TextArea  symptom ={symptom}  key={0} /> </Grid>)
+    return (<Grid item xs={12} sm={6} key={index}> <TextArea  symptom ={symptom}  key={0} /> </Grid>)
       
       case "dropdown": 
       symptom["optionObject"]=symptomHandler.ListOptions(symptom.options, "dropdown")
@@ -108,7 +97,9 @@ return(
         onSubmit={onSubmit}
         //validationSchema={validationSchema}
         innerRef={formValues}
+      
         >
+
 
 
        <Form>

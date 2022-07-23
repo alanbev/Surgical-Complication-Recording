@@ -14,7 +14,7 @@ function InputField(props) {
     return (
         <Box sx={{border:"solid", borderColor:"grey.300",borderRadius:"10px", width:"auto", margin:2, backgroundColor:"aliceblue", display:(symptom.show ? "block" : "none")}}>
         <label htmlFor={name}> {label} </label>
-        <Field className="modalInputBox" type={type} id={name} onChange={props.onChange} name={name} {...rest} />
+        <Field  className="modalInputBox" type={type} id={name}  name={name}  {...rest} />
        
         </Box>
      
