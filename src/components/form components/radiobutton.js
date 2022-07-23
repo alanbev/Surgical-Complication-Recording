@@ -22,6 +22,9 @@ function RadioButton(props) {
                     {...field}
                     value = {option.value}
                     checked = {field.value===(option.value)}
+                    onMouseDown={props.onClick}
+                    
+    
                     />
                 <label htmlFor = {option.value}> {option.key} </label>
                 </p>

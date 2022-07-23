@@ -23,16 +23,23 @@ const referalContents=[
     controlType:"dropdown",
     options:["0","1","2","3","4","5"]   
     },
-        
+
     {
-    label:"Consultant",
+    label:"MDT to refer to",
     controlType:"dropdown",
-    options:["Barrow","Beveridge", "Bhowmick", "Hany", "Jadav", "Khan", "Mitchell", "Parkin", "Peristerakis"]   
+    options:["Anal", "Colorectal","CUP" , "ERC", "Gynaecology", "Haematology", "Lung", "Neuro", "Sarcoma","Skin", "Upper GI", "Urology"],
+    },   
+    
+    
+    {
+    label:" MDT Consultant",
+    controlType:"dropdown",
+    options:["Unspecifed","Barrow","Beveridge", "Bhowmick", "Hany", "Jadav", "Khan", "Mitchell", "Parkin", "Peristerakis"]   
     },
 
     {
-    label:"Consultant referring",
-    controlType:"dropdown",
+    label:"Consultant referring (if not MDT cons)",
+    controlType:"text",
     options:["Barrow","Beveridge", "Bhowmick", "Hany", "Jadav", "Khan", "Mitchell", "Parkin", "Peristerakis"]   
     },
 
@@ -62,7 +69,7 @@ const referalContents=[
     label:"Trust referring",
     controlType:"dropdown",
     options:["Blackpool", "East Lancs", "Morcambe Bay"],
-    Conditional:["LTH patient", "false" ] 
+    Conditional:["LTH_patient", "No"] 
     },
 
 
@@ -73,11 +80,7 @@ const referalContents=[
     default: "No"  
     },
 
-    {
-    label:"MDT to refer to",
-    controlType:"dropdown",
-    options:["Anal", "Colorectal","CUP" , "ERC", "Gynaecology", "Haematology", "Lung", "Neuro", "Sarcoma","Skin", "Upper GI", "Urology"],
-    },
+   
 
     {
     label:"Brief Clincal History",
@@ -102,7 +105,7 @@ const referalContents=[
     label:"Operation",
     controlType:"text",
     options:[],
-    Conditional:["LTH patient", "false" ] 
+    Conditional:["Post_Op_discussion", "Yes" ] 
     },
 
     {

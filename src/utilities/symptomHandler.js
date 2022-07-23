@@ -17,9 +17,16 @@ initialValuesBuilder:(questions)=>
             }
         else 
             {
-             newObject[labelNoWhitespace]="" //otherwise initialise string
+            if (item["default"]==="undefined")
+                {
+                newObject[labelNoWhitespace]="" //otherwise initialise string
+                }
+            else
+                {
+                newObject[labelNoWhitespace]=item["default"]
+                }
             }
-        })
+            })
     return newObject
     },
 
