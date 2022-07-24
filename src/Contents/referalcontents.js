@@ -83,7 +83,7 @@ const referalContents=[
    
 
     {
-    label:"Brief Clincal History",
+    label:"Brief Clinical History",
     controlType:"textarea",
     options:[]
     },
@@ -91,11 +91,11 @@ const referalContents=[
     {
     label:"Investigations to discuss",
     controlType:"checkbox group",
-    options:["Histology", "CT", "MR", "Other radiology", "Endoscopic investigations"],
+    options:["Histology", "CT", "MR", "Other radiology", "Endoscopic Ix"],
     },
 
     {
-    label:"Post Op discussion",
+    label:"Post Op discussion", 
     controlType:"radio button",
     options:["Yes", "No"] ,
     default: "No"  
