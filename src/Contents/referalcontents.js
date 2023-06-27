@@ -6,14 +6,14 @@ const referalContents=[
     },
 
     {
-    label:"Hospital number",
+    label:"NHS number",
     controlType:"number",
     options:[]
     },
 
     {
-    label:"Age",
-    controlType:"number",
+    label:"Date of Birth",
+    controlType:"date",
     options:[""]   
     },
 
@@ -40,12 +40,18 @@ const referalContents=[
     {
     label:"Consultant referring (if not MDT cons)",
     controlType:"text",
-    options:["Barrow","Beveridge", "Bhowmick", "Hany", "Jadav", "Khan", "Mitchell", "Parkin", "Peristerakis"]   
+    options:[]   
     },
 
-        
     {
-    label:"Urgent addition (Ignore addition deadline)",
+    label:"Specialty of Consultant referring (if not MDT cons)",
+    controlType:"text",
+    options:[]   
+    },
+
+
+    {
+    label:"Urgent addition (e.g. inpatient)",
     controlType:"radio button",
     options:["Yes", "No"] ,
     default: "No"  
