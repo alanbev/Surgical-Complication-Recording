@@ -6,14 +6,14 @@ const referalContents=[
     },
 
     {
-    label:"Hospital number",
+    label:"NHS number",
     controlType:"number",
     options:[]
     },
 
     {
-    label:"Age",
-    controlType:"number",
+    label:"Date of Birth",
+    controlType:"date",
     options:[""]   
     },
 
@@ -40,12 +40,18 @@ const referalContents=[
     {
     label:"Consultant referring (if not MDT cons)",
     controlType:"text",
-    options:["Barrow","Beveridge", "Bhowmick", "Hany", "Jadav", "Khan", "Mitchell", "Parkin", "Peristerakis"]   
+    options:[]   
     },
 
-        
     {
-    label:"Urgent addition (Ignore addition deadline)",
+    label:"Specialty of Consultant referring (if not MDT cons)",
+    controlType:"text",
+    options:[]   
+    },
+
+
+    {
+    label:"Urgent addition (e.g. inpatient)",
     controlType:"radio button",
     options:["Yes", "No"] ,
     default: "No"  
@@ -83,7 +89,7 @@ const referalContents=[
    
 
     {
-    label:"Brief Clincal History",
+    label:"Brief Clinical History",
     controlType:"textarea",
     options:[]
     },
@@ -91,11 +97,11 @@ const referalContents=[
     {
     label:"Investigations to discuss",
     controlType:"checkbox group",
-    options:["Histology", "CT", "MR", "Other radiology", "Endoscopic investigations"],
+    options:["Histology", "CT", "MR", "Other radiology", "Endoscopic Ix"],
     },
 
     {
-    label:"Post Op discussion",
+    label:"Post Op discussion", 
     controlType:"radio button",
     options:["Yes", "No"] ,
     default: "No"  

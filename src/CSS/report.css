@@ -34,6 +34,9 @@ margin: 5px
     max-width:100%;
     display: flex;
     flex-flow: column wrap;
+    flex-wrap: wrap;
+    word-break:normal; 
+    overflow-wrap: normal;
     width: auto; 
     margin: 1px;
     background-color: aliceblue;

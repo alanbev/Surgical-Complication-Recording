@@ -4,13 +4,19 @@
   "homepage": "https://alanbev.github.io/MDT-Referral-Form",
   "private": true,
   "dependencies": {
-    "@fontsource/roboto": "^4.5.7",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.13.6",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ajv": "^6.12.6",
+    "formik": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "typescript": "^5.1.6",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
@@ -41,6 +47,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "@babel/preset-react": "^7.22.5",
+    "gh-pages": "^4.0.0",
+    "@babel/plugin-proposal-private-property-in-object":"7.21.11"
   }
 }
