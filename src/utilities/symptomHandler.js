@@ -17,7 +17,7 @@ initialValuesBuilder:(questions)=>
             }
         else 
             {
-            if (!item.hasOwnProperty("default"))
+            if (item["default"]==="undefined")
                 {
                 newObject[labelNoWhitespace]="" //otherwise initialise string
                 }
