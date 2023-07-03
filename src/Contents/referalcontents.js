@@ -48,7 +48,11 @@ const referalContents=[
     controlType:"text",
     options:[]   
     },
-
+    {
+    label:"Contact e-mail for referrer",
+    controlType:"text",
+    options:[]   
+    },
 
     {
     label:"Urgent addition (e.g. inpatient)",
@@ -86,7 +90,34 @@ const referalContents=[
     default: "No"  
     },
 
-   
+
+    {
+    label:"MDT to refer to",
+    controlType:"dropdown",
+    options:["Anal", "Colorectal","CUP" , "ERC", "Gynaecology", "Haematology", "Lung", "Neuro", "Sarcoma","Skin", "Upper GI", "Urology"],
+    }, 
+
+    
+    {
+    label:"Previously discussed at this MDT",
+    controlType:"radio button",
+    options:["Yes", "No"] ,
+    default: "No"  
+    },
+    
+    {
+    label:"Has this episode been discussed at another MDT",
+    controlType:"radio button",
+    options:["Yes", "No"] ,
+    default: "No"  
+    },
+
+  {
+    label:"Which other MDT has discussed this episode",
+    controlType:"dropdown",
+    options:["Anal", "Colorectal","CUP" , "ERC", "Gynaecology", "Haematology", "Lung", "Neuro", "Sarcoma","Skin", "Upper GI", "Urology"],
+    Conditional:["Has_this_episode_been_discussed_at_another_MDT", "Yes" ] 
+    }, 
 
     {
     label:"Brief Clinical History",
@@ -94,6 +125,7 @@ const referalContents=[
     options:[]
     },
 
+  
     {
     label:"Investigations to discuss",
     controlType:"checkbox group",
