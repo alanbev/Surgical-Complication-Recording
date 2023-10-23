@@ -2,13 +2,13 @@ import React, {  useRef, useContext, useState ,useEffect} from 'react';
 import {  Button, Box, Grid } from '@mui/material';
 import { Formik, Form, Field, ErrorMessage, validateYupSchema } from 'formik';
 import * as Yup from 'yup'
-import symptomHandler from '../../utilities/symptomHandler.js';
-import RadioButton from './radiobutton';
-import CheckboxGroup from './checkboxgroup'
-import InputField from './inputfield';
-import TextArea from './textarea';
-import DropDown from './dropdown'
-import ReferralContents from '../../Contents/referalcontents.js'
+import symptomHandler from './symptomHandler.js';
+import RadioButton from './radiobutton.js';
+import CheckboxGroup from './checkboxgroup.js'
+import InputField from './inputfield.js';
+import TextArea from './textarea.js';
+import DropDown from '../src/components/form components/dropdown.js'
+import ReferralContents from './referalcontents.js'
 
 
 

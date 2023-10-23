@@ -33,7 +33,7 @@ render(
 
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Lancashire Teaching Hospitals  Cancer MDT Referral Form
+         Record a complication
         </Typography>
       </Toolbar>
     </AppBar>
