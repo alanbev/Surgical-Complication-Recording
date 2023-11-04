@@ -15,7 +15,7 @@ complications:["Bleeding",
 Chest:
 {
 displayAs:"Chest",
-complicatons:[
+complications:[
 "Airway obstruction",
 "Anastomotic leak- oesophagus",
 "Empyema",
@@ -34,7 +34,7 @@ complicatons:[
 Limbs:
 {
 displayAs:"Limbs",
-complicatons:[
+complications:[
 "Arterial occlusion",
 "Bone necrosis",
 "Cellulitis",
@@ -97,7 +97,7 @@ complications:[
 Spine:
 {
 displayAs:"Spine",
-complicatons:[
+complications:[
 "Cord compression",
 "Collection - infected",
 "Nerve root compression",

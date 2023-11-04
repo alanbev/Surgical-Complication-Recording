@@ -1,14 +1,15 @@
-import React, {  } from 'react';
+import React from 'react';
 import {Field, ErrorMessage } from 'formik';
 import  {Box, } from '@mui/material/';
 import '../../CSS/report.css'
 
 
-function RadioButton(props) {
 
-    const { label, name, optionObject, ...rest } = props.symptom
+function CheckboxGroup(props) {
+
+    const { label, name, optionObject, ...rest } = props.features
     return (
-        <Box  className="radioboxContainer">
+        <Box  className="checkboxContainer">
         <label> {label} </label>
         <Field  name={name} {...rest}>
 {({field }) => {
@@ -17,14 +18,11 @@ function RadioButton(props) {
                 <React.Fragment key = {option.key}>
                     <p className="checkboxItem">
                     <input
-                    type = "radio"
+                    type = "checkbox"
                     id =  {option.value}
                     {...field}
                     value = {option.value}
-                    checked = {field.value===(option.value)}
-                    onMouseDown={props.onClick}
-                    
-    
+                    checked = {field.value.includes(option.value)}
                     />
                 <label htmlFor = {option.value}> {option.key} </label>
                 </p>
@@ -38,4 +36,4 @@ function RadioButton(props) {
      );
 }
 
-export default RadioButton;
+export default CheckboxGroup;
