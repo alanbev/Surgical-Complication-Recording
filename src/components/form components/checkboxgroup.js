@@ -1,9 +1,7 @@
 import React from 'react';
-import {Field, ErrorMessage } from 'formik';
-import  {Box, } from '@mui/material/';
+import {Field} from 'formik';
+import  {Box } from '@mui/material/';
 import '../../CSS/report.css'
-
-
 
 function CheckboxGroup(props) {
 

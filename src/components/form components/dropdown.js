@@ -1,13 +1,13 @@
-import React, {  } from 'react';
-import {Field } from 'formik';
-import  {Box, } from '@mui/material/';
+import React from 'react';
+import {Field} from 'formik';
+import  {Box} from '@mui/material/';
 
 
 
 function DropDown(props) {
 
     const { label, name, optionObject,show } = props.dataForControl
-    
+ 
     return (
         <Box sx={{border:"solid", borderColor:"grey.300",borderRadius:"10px", width:"auto", margin:1, backgroundColor:"aliceblue", display:(show ? "block" : "none")}} >
 
@@ -16,9 +16,11 @@ function DropDown(props) {
 
         {optionObject.map(option=>{
             return (
-                <option key = {option.key} value = {option.key}>
+                <option key = {option.key} value = {option.key} >
                     {option.value}
+                   
                 </option>
+        
                 )
         })}
        </Field>

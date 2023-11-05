@@ -1,6 +1,6 @@
 const existingComplications=[
-    {date:"23/10/22",
-    bodyArea:"Abdomen",
+    {date:"23/10/2023",
+    bodyArea:"AbdomenAndPelvis",
     complication:"Anastomotic leak",
     severityFeatures:[],
     clavienDindo:"3"

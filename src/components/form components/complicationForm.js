@@ -13,7 +13,7 @@ const [initialValues, setInitialValues]=useState({complication:"", severityFeatu
 
 const dataForControl={}
 dataForControl.name="complication"
-dataForControl.label="Select the complication"
+dataForControl.label="Then select the complication"
 
 dataForControl.optionObject=[{key:"noSelection",value:"Select an Option"}]
 dataForControl.show=true
@@ -50,18 +50,18 @@ const onSubmit=(values)=>{
 }
 
 return(
-<>
+<Box sx={{border:"solid",borderColor: "silver", borderRadius:2, marginLeft:5}}>
 <Formik
     initialValues={initialValues}
     onSubmit={onSubmit}>
 <Form>
     <DropDown  dataForControl={dataForControl} key={0} /> 
     <CheckboxGroup features={features} key={1}/>
-    <Button sx={{ m: 1 }} variant='contained' size="small" type='submit'>Select area</Button>
+    <Button sx={{ m: 1 }} variant='contained' size="small" type='submit'>Enter a new complication</Button>
 </Form>
 
 </Formik>
-</>
+</Box>
 )
 
 
