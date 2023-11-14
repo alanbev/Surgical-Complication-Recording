@@ -48,7 +48,8 @@ complications:[
 "Haematoma",
 "Infected prosthesis /implant",
 "Infected vascular access device",
-"Joint infection"],
+"Joint infection",
+"Lymphoedema"]
 },
 
 AbdomenAndPelvis:
@@ -71,6 +72,7 @@ complications:[
 "Hepatic dysfunction",
 "Intraperitoneal bleeding",
 "Ileus",
+"Lymphocyst",
 "Pancreatitis",
 "Peritonitis",
 "Pressure sore",
