@@ -16,8 +16,10 @@ Chest:
 {
 displayAs:"Chest",
 complications:[
+"Airway injury",
 "Airway obstruction",
 "Anastomotic leak- oesophagus",
+"Chyle leak",
 "Empyema",
 "Haemothorax",
 "Lower respiratory tract infection",	
@@ -91,7 +93,9 @@ complications:[
 "CVA- thromboembolic",
 "Intracranial bleeding",
 "Intracranial abscess",
-"Intracranial haematoma"]},
+"Intracranial haematoma",
+"Nerve injury- facial",
+"Nerve injury- recurrent laryngeal",]},
 
 
 Spine:
